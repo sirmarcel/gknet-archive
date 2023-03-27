@@ -1,0 +1,27 @@
+[calculator]
+name:                          UnfoldedHeatFluxCalculator
+module:                        gknet.experimental.unfolded_heatflux
+
+[calculator.parameters]
+model:                         ../../../../best_model.torch
+skin:                          1.0
+skin_unfolder:                 1.5
+
+[recompute]
+outfolder:                     unfolded_rt
+batch_size:                    1000
+step:                          1
+
+[slurm]
+name:                          re
+tag:                           c:reurt:1400:4116
+mail_type:                     none
+mail_address:                  langer@fhi-berlin.mpg.de
+nodes:                         1
+cores:                         40
+queue:                         p.talos
+timeout:                       720
+pre_command:                   
+
+[restart]
+command:                       gknet submit recompute re_ufrt.in

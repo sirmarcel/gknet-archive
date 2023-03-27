@@ -1,0 +1,132 @@
+[vibes.run]    run relaxation workflow with settings from relaxation.in
+
+[relaxation]   ** /raven/u/mlang/gknet-aims/ccl_zro_t96/relaxation/relaxation/trajectory.son does not exist, nothing to prepare
+[calculator]   .. add `output_level: MD_light` to parameters (default)
+** Warning from file vibes/calculator/aims.py, line 76, function create_species_dir:
+--> Species default 'cc_light' unknown.
+
+[calculator]   Add basisset `cc_light` for atom `Zr` to basissets folder.
+[calculator]   Add basisset `cc_light` for atom `O` to basissets folder.
+[calculator]   Calculator: aims
+[calculator]   settings:
+[calculator]     xc: pbesol
+[calculator]     sc_accuracy_rho: 1e-06
+[calculator]     sc_accuracy_eev: 0.0001
+[calculator]     sc_accuracy_etot: 1e-06
+[calculator]     sc_accuracy_forces: 0.0001
+[calculator]     compute_heat_flux: False
+[calculator]     compute_analytical_stress: True
+[calculator]     compensate_multipole_errors: False
+[calculator]     normalize_initial_density: False
+[calculator]     mixer: pulay
+[calculator]     n_max_pulay: 10
+[calculator]     charge_mix_param: 0.15
+[calculator]     k_grid: [2, 2, 2]
+[calculator]     relativistic: atomic_zora scalar
+[calculator]     occupation_type: gaussian  0.1
+[calculator]     output_level: MD_light
+[calculator]     compute_forces: True
+[calculator]     use_pimd_wrapper: ('localhost', 10011)
+[calculator]     aims_command: /u/mlang/gknet-aims/bin/run_aims_raven
+[calculator]     species_dir: /raven/u/mlang/gknet-aims/ccl_zro_t96/relaxation/relaxation/basissets
+[relaxation]   filter settings:
+[relaxation]     hydrostatic_strain: False
+[relaxation]     constant_volume: False
+[relaxation]     scalar_pressure: 0.0
+[relaxation]     mask: None
+[relaxation]   driver: BFGS
+[relaxation]   settings:
+[relaxation]     type: optimization
+[relaxation]     optimizer: BFGS
+[relaxation]     maxstep: 0.2
+[socketio]     Use SocketIO with host localhost and port 10011
+[relaxation]   filter settings:
+[relaxation]     hydrostatic_strain: False
+[relaxation]     constant_volume: False
+[relaxation]     scalar_pressure: 0.0
+[relaxation]     mask: None
+[relaxation]   Start step 0
+[relaxation]   Step 0 finished.
+[relaxation]   .. residual force:  154.648 meV/AA
+[relaxation]   .. residual stress: 479.120 meV/AA**3
+[vibes]        .. Space group:     P4_2/nmc (137)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 1 finished.
+[relaxation]   .. residual force:  234.303 meV/AA
+[relaxation]   .. residual stress: 1578.783 meV/AA**3
+[vibes]        .. Space group:     P4_2/nmc (137)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 2 finished.
+[relaxation]   .. residual force:  167.305 meV/AA
+[relaxation]   .. residual stress: 99.125 meV/AA**3
+[vibes]        .. Space group:     P4_2/nmc (137)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 3 finished.
+[relaxation]   .. residual force:  150.749 meV/AA
+[relaxation]   .. residual stress: 69.065 meV/AA**3
+[vibes]        .. Space group:     Ccce (68)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 4 finished.
+[relaxation]   .. residual force:  25.922 meV/AA
+[relaxation]   .. residual stress: 629.171 meV/AA**3
+[vibes]        .. Space group:     Ccce (68)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 5 finished.
+[relaxation]   .. residual force:  3.042 meV/AA
+[relaxation]   .. residual stress: 435.736 meV/AA**3
+[vibes]        .. Space group:     Ccce (68)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 6 finished.
+[relaxation]   .. residual force:  5.370 meV/AA
+[relaxation]   .. residual stress: 117.920 meV/AA**3
+[vibes]        .. Space group:     Ccce (68)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 7 finished.
+[relaxation]   .. residual force:  1.243 meV/AA
+[relaxation]   .. residual stress: 64.217 meV/AA**3
+[vibes]        .. Space group:     Ccce (68)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Step 8 finished.
+[relaxation]   .. residual force:  0.064 meV/AA
+[relaxation]   .. residual stress: 0.508 meV/AA**3
+[vibes]        .. Space group:     Ccce (68)
+[relaxation]   clean atoms before logging
+[relaxation]   .. log
+[relaxation]   Relaxation converged.
+[relaxation]   done.
+                                  
+================================= 
+Global information about the job: 
+================================= 
+  
+Job owner: mlang(30883)
+Job name:  relaxation|relax
+Node list: ravc4064
+Job start: Fri Dec 18 19:06:37 CET 2020
+Job end:   Fri Dec 18 19:08:09 CET 2020
+Work dir:  /u/mlang/gknet-aims/ccl_zro_t96/relaxation/./
+Command:   /raven/u/mlang/gknet-aims/ccl_zro_t96/relaxation/submit.sh
+  
+  
+  
+==========================================================================================
+Information on jobsteps (Note: MaxRSS/AveRSS is the maximum/average over all 
+tasks of the per-task memory high-water marks; cf. "man sacct"): 
+==========================================================================================
+  
+       JobID    JobName NNodes NTasks  NCPUS       MaxRSS       AveRSS    Elapsed ExitCode 
+------------ ---------- ------ ------ ------ ------------ ------------ ---------- -------- 
+130166       relaxatio+      1           192                             00:01:32      0:0 
+130166.0     aims.2009+      1     96     96      244.67M      230.64M   00:01:12      0:0 
+  
+Maximum memory per node: 24.0517 GB (defined as MaxRSS*Ntasks/NNodes)
+CPU utilization: 69.6 %
+     

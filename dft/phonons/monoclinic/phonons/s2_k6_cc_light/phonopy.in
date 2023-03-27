@@ -1,0 +1,52 @@
+[calculator]
+name:                          aims
+socketio:                      true
+
+[calculator.parameters]
+xc:                            pbesol
+
+sc_accuracy_rho:               1e-7
+#sc_accuracy_eev:               1e-4
+#sc_accuracy_etot:              1e-6
+#sc_accuracy_forces:            1e-4
+
+compute_heat_flux:             false
+compute_analytical_stress:     false
+
+compensate_multipole_errors:   false
+normalize_initial_density:     false
+
+mixer:                         pulay
+n_max_pulay:                   10
+charge_mix_param:              0.15
+
+k_grid:                        [6, 6, 6]
+
+relativistic:                  atomic_zora scalar
+occupation_type:               gaussian  0.1
+
+[calculator.basissets]
+default:                       cc_light
+
+[phonopy]
+supercell_matrix:              2
+displacement:                  0.01
+is_diagonal:                   false
+is_plusminus:                  true
+symprec:                       1e-05
+q_mesh:                        [45, 45, 45]
+workdir:                       phonopy
+
+[slurm]
+name:                          phonopy
+tag:                           verdi
+mail_type:                     all
+mail_address:                  langer@fhi-berlin.mpg.de
+nodes:                         2
+cores:                         72
+queue:                         exclusive
+timeout:                       60
+pre_command:                   conda activate gknet_aims
+
+[restart]
+command:                       vibes submit phonopy

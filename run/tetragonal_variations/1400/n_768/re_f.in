@@ -1,0 +1,34 @@
+[calculator]
+name:                          fastCalculator
+module:                        gknet.experimental
+
+[calculator.parameters]
+model:                         ../../../../best_model.torch
+virials_reference:             geometry.in.supercell
+virials:                       True
+skin:                          0.0
+fan:                           True
+
+# return "wrong" virials as "true" virials
+# mpnn-corrected ones are retained anyhow
+fan_mpnn:                      False
+
+[recompute]
+outfolder:                     fan_r0
+batch_size:                    100
+stop:                          125000
+step:                          2
+
+[slurm]
+name:                          re
+tag:                           c:ref:1400:768
+mail_type:                     none
+mail_address:                  langer@fhi-berlin.mpg.de
+nodes:                         1
+cores:                         40
+queue:                         p.talos
+timeout:                       720
+pre_command:                   
+
+[restart]
+command:                       gknet submit recompute re_f.in

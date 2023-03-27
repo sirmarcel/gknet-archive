@@ -1,0 +1,14 @@
+model:
+  atomwise:
+    mean: 0.0
+    n_in: 128
+    n_layers: 2
+    n_neurons: null
+    stddev: 20.0
+  representation:
+    cutoff: 7.0
+    n_atom_basis: 128
+    n_filters: 128
+    n_interactions: 2
+    normalize_filter: false
+    trainable_gaussians: false

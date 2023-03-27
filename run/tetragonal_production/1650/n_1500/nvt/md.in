@@ -1,0 +1,41 @@
+[calculator]
+name:                          fastCalculator
+module:                        gknet.experimental
+
+[calculator.parameters]
+model:                         ../../../../best_model.torch
+stress:                        True
+virials:                       False
+skin:                          3.0
+
+
+[md]
+driver:                        Langevin
+timestep:                      4
+maxsteps:                      50000
+workdir:                       md
+
+[md.kwargs]
+temperature:                   1650
+friction:                      0.02
+logfile:                       md.log
+
+
+[files]
+geometry:                      geometry.in
+primitive:                     geometry.in.primitive
+supercell:                     geometry.in.supercell
+
+[slurm]
+name:                          nvt
+tag:                           tet:th:1650:1500
+mail_type:                     none
+mail_address:                  langer@fhi-berlin.mpg.de
+nodes:                         1
+cores:                         40
+queue:                         p.talos
+timeout:                       60
+pre_command:                   
+
+[restart]
+command:                       vibes submit md md.in

@@ -1,0 +1,18 @@
+[train]
+parallel:                      true
+device:                        cuda
+steps_per_loop:                1
+
+[slurm]
+name:                          train
+tag:                           cu6.0
+mail_type:                     none
+mail_address:                  langer@fhi-berlin.mpg.de
+nodes:                         1
+cores:                         40
+queue:                         p.talos
+timeout:                       600
+pre_command:                   
+
+[restart]
+command:                       gknet submit train train.in

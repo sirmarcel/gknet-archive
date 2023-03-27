@@ -1,0 +1,66 @@
+[md]
+driver:                        NPTBerendsen
+timestep:                      4
+maxsteps:                      1250
+compute_stresses:              True
+workdir:                       md
+
+[md.kwargs]
+temperature:                   1500
+inhomogeneous:                 True
+taut:                          500.0
+taup:                          500.0
+pressure:                      1.01325
+compressibility:               1e-05
+logfile:                       md.log
+
+[files]
+geometry:                      geometry.in
+primitive:                     geometry.in.primitive
+supercell:                     geometry.in.supercell
+
+
+[calculator]
+name:                          aims
+socketio:                      true
+
+[calculator.parameters]
+xc:                            pbesol
+
+sc_accuracy_rho:               1e-6
+sc_accuracy_eev:               1e-4
+sc_accuracy_etot:              1e-6
+sc_accuracy_forces:            1e-4
+
+compute_heat_flux:             false
+compute_analytical_stress:     true
+
+compensate_multipole_errors:   false
+normalize_initial_density:     false
+
+mixer:                         pulay
+n_max_pulay:                   10
+charge_mix_param:              0.15
+
+k_grid:                        [2, 2, 2]
+
+relativistic:                  atomic_zora scalar
+occupation_type:               gaussian  0.1
+
+[calculator.basissets]
+default:                       cc_light
+
+
+[slurm]
+name:                          npt
+tag:                           inpt_1
+mail_type:                     none
+mail_address:                  langer@fhi-berlin.mpg.de
+nodes:                         1
+cores:                         96
+queue:                         exclusive
+timeout:                       120
+pre_command:                   conda activate gknet_aims
+
+[restart]
+command:                       vibes submit md md.in

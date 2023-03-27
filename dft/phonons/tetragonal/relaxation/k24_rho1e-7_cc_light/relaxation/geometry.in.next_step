@@ -1,0 +1,20 @@
+#=======================================================
+# FHI-aims file: /raven/u/mlang/gknet-aims/new_fk_tetragonal/relaxation/k24_rho1e-7_cc_light/relaxation/geometry.in.next_step
+# Created using the Atomic Simulation Environment (ASE)
+# Thu Mar 23 14:31:29 2023
+
+# Additional information:
+#  Relaxed with BFGS, fmax=1.000 meV/AA
+#  nsteps = 7
+#  residual force  = 0.060290 meV/AA
+#  residual stress = 0.907797 meV/AA
+#=======================================================
+lattice_vector 3.5892673459869999 -0.0000000000000000 0.0000000000000000 
+lattice_vector -0.0000000000000000 3.5892673459869999 0.0000000000000000 
+lattice_vector -0.0000000000000000 0.0000000000000000 5.1870235842760000 
+atom_frac 0.5000000000000000 0.5000000000000000 0.0000000000000000 Zr
+atom_frac 0.0000000000000000 0.0000000000000000 0.5000000000000000 Zr
+atom_frac 0.5000000000000000 0.0000000000000000 0.2009052878320000 O
+atom_frac 0.5000000000000000 0.0000000000000000 0.7009052878320000 O
+atom_frac 0.0000000000000000 0.5000000000000000 0.7990947121680000 O
+atom_frac 0.0000000000000000 0.5000000000000000 0.2990947121680000 O

@@ -1,0 +1,51 @@
+<simulation mode='md' verbosity='medium'>
+  <output prefix='simulation'>
+    <trajectory stride='100' flush='1' filename='pos' cell_units='angstrom'>positions{angstrom}</trajectory>
+    <trajectory stride='100' flush='1' filename='vel'>velocities</trajectory>
+    <properties stride='10' flush='1' filename='out'>  [ step, time{picosecond}, ensemble_temperature{kelvin}, temperature{kelvin}, volume{angstrom3}, pressure_md{bar}, pressure_md{gigapascal}] </properties>
+    <checkpoint stride='1000'/>
+  </output>
+  <total_steps> 3000000 </total_steps>
+  <total_time> 344000 </total_time>
+  <ffsocket mode='inet' name='gknet' pbc='True'>
+    <address>localhost</address>
+    <port>10200</port>
+  </ffsocket>
+  <system>
+    <initialize nbeads='1'>
+      <file mode='xyz'>  geometry.xyz </file>
+      <velocities mode='thermal' units='kelvin'> 100 </velocities>
+    </initialize>
+    <forces>
+      <force forcefield='gknet'> </force>
+    </forces>
+    <ensemble>
+      <temperature units='kelvin'> 2800 </temperature>
+      <pressure units='bar'> 1 </pressure>
+    </ensemble>
+    <motion mode='multi'>
+      <motion mode='dynamics'>
+        <dynamics mode='npt'>
+          <barostat mode='flexible'>
+            <tau units='picosecond'> 5 </tau>
+            <thermostat mode='svr'>
+              <tau units='picosecond'> 3 </tau>
+            </thermostat>
+          </barostat>
+            <thermostat mode='svr'>
+              <tau units='picosecond'> 5 </tau>
+            </thermostat>
+          <timestep units='femtosecond'> 1 </timestep>
+        </dynamics>
+      </motion>
+      <motion mode="t_ramp">
+         <t_ramp>
+           <t_start units="kelvin"> 100 </t_start>
+           <t_end units="kelvin"> 2800 </t_end>
+           <total_steps> 2700000 </total_steps> 
+           <logscale> False </logscale>
+       </t_ramp>
+      </motion>
+    </motion>
+  </system>
+</simulation>

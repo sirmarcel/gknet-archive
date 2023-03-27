@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "gknet"
+version = "0.1.0"
+description = "Infrastructure for gknet project"
+authors = ["Marcel Langer <me@sirmarcel.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+stepson =  { git = "https://gitlab.com/sirmarcel/stepson.git", branch = "main" }
+dask = "^2021.4.1"
+
+[tool.poetry.dev-dependencies]
+
+
+[tool.poetry.scripts]
+gknet = 'gknet.cli:gknet'
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

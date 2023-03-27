@@ -1,0 +1,64 @@
+[trajectory]   Parse `trajectory.son`
+[son] read file:  trajectory.son
+[son] process:    |                                   |     0/2502[son] process:    |||||||||||||||||||||||||||||||||||||  2502/2502[trajectory]   .. time elapsed: 2.316s
+[trajectory]   .. create atoms
+[trajectory]   .. time elapsed: 2.110s
+[trajectory]   .. set raw hash
+[trajectory]   .. time elapsed: 0.151s
+[trajectory]   .. done in 4.577s
+[trajectory]   Get positions from trajectory
+[trajectory]   .. time elapsed: 1.201s
+[trajectory]   Get velocities from trajectory
+[trajectory]   .. time elapsed: 0.040s
+[trajectory]   Compute displacements
+[trajectory]   .. time elapsed: 0.390s
+[trajectory]   Get pressure from trajectory
+[trajectory]   .. time elapsed: 0.020s
+Dataset summary for trajectory.son:
+
+[info]         Summarize Displacements
+Avg. Displacement:        0.7139 AA
+Max. Displacement:        7.589 AA
+Avg. Displacement [O]:    0.85171 AA
+Avg. Displacement [Zr]:   0.43827 AA
+
+[info]         Summarize Forces
+Avg. Force:               -1.7559e-18 eV/AA
+Std. Force:               1.6846 eV/AA
+Std. Force [O]:           1.5388 eV/AA
+Std. Force [Zr]:          1.9438 eV/AA
+
+[info]         Summarize Temperature
+Simulation time:            10.000 ps (2501 steps)
+Temperature:                  2220.247 +/-     702.6201 K
+Temperature (1st 1/3):        1421.400 +/-     663.0855 K
+Temperature (2st 1/3):        2522.554 +/-     204.7183 K
+Temperature (3st 1/3):        2715.597 +/-     158.3281 K
+Temperature (last 1/2):       2685.009 +/-     171.6273 K
+
+[info]         Summarize Potential Energy
+Simulation time:            10.000 ps (2501 steps)
+Pot. Energy:              -3290105.099 +/-      12.3310 eV
+Pot. Energy (1st 1/3):    -3290119.830 +/-       9.8406 eV
+Pot. Energy (2st 1/3):    -3290100.616 +/-       3.3172 eV
+Pot. Energy (3st 1/3):    -3290094.875 +/-       2.5945 eV
+
+[info]         Summarize Kinetic Pressure
+Simulation time:            10.000 ps (2501 of 2501 steps)
+Pressure:                     2.490761 +/-   0.755764 GPa
+Pressure (last 1/2):          2.972723 +/-   0.189850 GPa
+Pressure (last 1/2):          0.018554 +/-   0.001185 eV/AA**3
+[info]         Summarize Potential Pressure
+Simulation time:            10.000 ps (2501 of 2501 steps)
+Pressure:                    -2.372211 +/-   1.491333 GPa
+Pressure (last 1/2):         -2.905486 +/-   1.358252 GPa
+Pressure (last 1/2):         -0.018135 +/-   0.008478 eV/AA**3
+[info]         Summarize Total Pressure (Kinetic + Potential)
+Simulation time:            10.000 ps (2501 of 2501 steps)
+Pressure:                     0.118550 +/-   1.208304 GPa
+Pressure (last 1/2):          0.067237 +/-   1.291337 GPa
+Pressure (last 1/2):          0.000420 +/-   0.008060 eV/AA**3
+
+[info]         Drift
+Mean abs. Momentum:       [2.8558e-14 2.8431e-14 2.9699e-14]
+.. summary plotted to md_summary.pdf

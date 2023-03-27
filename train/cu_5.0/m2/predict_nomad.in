@@ -1,0 +1,5 @@
+[predict]
+datasets:                      ["/talos/scratch/mlang/gknet/data/ccl_zro_t96/cu_5.0_e_inpt_4387/nomad.torch"]
+
+batch_size:                    100
+stress:                        false

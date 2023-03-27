@@ -1,0 +1,42 @@
+[calculator]
+name:                          fastCalculator
+module:                        gknet.experimental
+
+[calculator.parameters]
+model:                         ../../../best_model.torch
+stress:                        True
+energies:                      False
+virials:                       False
+skin:                          0.0
+
+[relaxation]
+driver:                        BFGS
+fmax:                          0.001
+unit_cell:                     False
+fix_symmetry:                  True
+hydrostatic_strain:            False
+constant_volume:               False
+scalar_pressure:               0.0
+decimals:                      12
+symprec:                       1e-05
+workdir:                       relaxation
+
+[relaxation.kwargs]
+maxstep:                       0.2
+logfile:                       relaxation.log
+restart:                       bfgs.restart
+
+
+[slurm]
+name:                          gk
+tag:                           relax
+mail_type:                     none
+mail_address:                  langer@fhi-berlin.mpg.de
+nodes:                         1
+cores:                         40
+queue:                         p.talos
+timeout:                       240
+pre_command:                   
+
+[restart]
+command:                       vibes submit relaxation

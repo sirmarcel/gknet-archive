@@ -1,0 +1,12 @@
+[predict]
+datasets:                      /talos/scratch/mlang/gknet/data/ccl_zro_t96/cu_7.0_e_inpt_4387/train.torch
+datasets:                      /talos/scratch/mlang/gknet/data/ccl_zro_t96/cu_7.0_e_inpt_4387/valid.torch
+datasets:                      /talos/scratch/mlang/gknet/data/ccl_zro_t96/cu_7.0_e_inpt_4387/cc_re5_300.torch
+datasets:                      /talos/scratch/mlang/gknet/data/ccl_zro_t96/cu_7.0_e_inpt_4387/cc_re5_1500.torch
+datasets:                      /talos/scratch/mlang/gknet/data/ccl_zro_t96/cu_7.0_e_inpt_4387/cc_re5_2400.torch
+datasets:                      /talos/scratch/mlang/gknet/data/ccl_zro_t96/cu_7.0_e_inpt_4387/cc_rerun_300.torch
+datasets:                      /talos/scratch/mlang/gknet/data/ccl_zro_t96/cu_7.0_e_inpt_4387/cc_rerun_2400.torch
+
+
+batch_size:                    100
+stress:                        true

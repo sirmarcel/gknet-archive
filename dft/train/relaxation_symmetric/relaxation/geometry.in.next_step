@@ -1,0 +1,20 @@
+#=======================================================
+# FHI-aims file: /raven/u/mlang/gknet-aims/ccl_zro_t96/relaxation_symmetric/relaxation/geometry.in.next_step
+# Created using the Atomic Simulation Environment (ASE)
+# Thu Feb 18 12:02:22 2021
+
+# Additional information:
+#  Relaxed with BFGS, fmax=1.000 meV/AA
+#  nsteps = 8
+#  residual force  = 0.067756 meV/AA
+#  residual stress = 0.452082 meV/AA
+#=======================================================
+lattice_vector 2.5488101217239998 2.5488101217239998 0.0000000000000000 
+lattice_vector -2.5488101217239998 2.5488101217239998 0.0000000000000000 
+lattice_vector 0.0000000000000000 0.0000000000000000 5.2236258650560004 
+atom_frac 0.0000000000000000 0.0000000000000000 0.0000000000000000 Zr
+atom_frac 0.5000000000000000 0.5000000000000000 0.4999999999999999 Zr
+atom_frac 0.5000000000000000 0.0000000000000000 0.1919005983830000 O
+atom_frac 0.5000000000000000 0.0000000000000000 0.6919005983830000 O
+atom_frac 0.0000000000000000 0.5000000000000000 0.3080994016170000 O
+atom_frac 0.0000000000000000 0.5000000000000000 0.8080994016169999 O

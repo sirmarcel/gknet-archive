@@ -1,0 +1,33 @@
+[calculator]
+name:                          fastCalculator
+module:                        gknet.experimental
+
+[calculator.parameters]
+model:                         ../../../best_model.torch
+stress:                        True
+energies:                      True
+virials:                       False
+skin:                          1.0
+
+[md]
+driver:                        VelocityVerlet
+timestep:                      4
+maxsteps:                      15000
+compute_stresses:              False
+
+[files]
+geometry:                      geometry.in
+
+[slurm]
+name:                          gk
+tag:                           ccrr:2400
+mail_type:                     none
+mail_address:                  langer@fhi-berlin.mpg.de
+nodes:                         1
+cores:                         40
+queue:                         p.talos
+timeout:                       30
+pre_command:                   
+
+[restart]
+command:                       vibes submit md md.in

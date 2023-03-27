@@ -1,0 +1,19 @@
+trainer:
+  loss:
+    mse:
+      energy: 0.001
+      forces: 0.999
+      stress: 100.0
+  optimizer:
+    adam:
+      lr: 0.0001
+  schedulers: [{plateau: {factor: 0.75, min_lr: 1.0e-06, patience: 20, stop_after_min: false,
+        window_length: 1}}, {early_stopping: {patience: 200}}]
+  train:
+    batch_size: 100
+    data: /talos/scratch/mlang/gknet/data/ccl_zro_t96/cu_4.0_e_inpt_4387/train.torch
+    shuffle: true
+  validate:
+    batch_size: 100
+    data: /talos/scratch/mlang/gknet/data/ccl_zro_t96/cu_4.0_e_inpt_4387/valid.torch
+    shuffle: false

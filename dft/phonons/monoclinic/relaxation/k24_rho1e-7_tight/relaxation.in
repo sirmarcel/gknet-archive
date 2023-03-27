@@ -1,0 +1,62 @@
+[calculator]
+name:                          aims
+socketio:                      true
+
+[calculator.parameters]
+xc:                            pbesol
+
+sc_accuracy_rho:               1e-7
+#sc_accuracy_eev:               1e-4
+#sc_accuracy_etot:              1e-6
+#sc_accuracy_forces:            1e-4
+
+compute_heat_flux:             false
+compute_analytical_stress:     true
+
+compensate_multipole_errors:   false
+normalize_initial_density:     false
+
+mixer:                         pulay
+n_max_pulay:                   10
+charge_mix_param:              0.15
+
+k_grid:                        [24, 24, 24]
+
+relativistic:                  atomic_zora scalar
+occupation_type:               gaussian  0.1
+
+[calculator.basissets]
+default:                       tight
+
+
+[relaxation]
+driver:                        BFGS
+fmax:                          0.001
+unit_cell:                     True
+fix_symmetry:                  True
+hydrostatic_strain:            False
+constant_volume:               False
+scalar_pressure:               0.0
+decimals:                      12
+symprec:                       1e-05
+workdir:                       relaxation
+
+[relaxation.kwargs]
+maxstep:                       0.2
+logfile:                       relaxation.log
+restart:                       bfgs.restart
+
+
+[slurm]
+name:                          relax
+tag:                           verdi
+mail_type:                     all
+mail_address:                  langer@fhi-berlin.mpg.de
+nodes:                         1
+cores:                         72
+queue:                         exclusive
+timeout:                       60
+pre_command:                   conda activate gknet_aims
+
+[restart]
+command:                       vibes submit relaxation

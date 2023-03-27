@@ -1,0 +1,32 @@
+[calculator]
+name:                          batchCalculator
+module:                        gknet.experimental
+
+[calculator.parameters]
+model:                         ../../../../best_model.torch
+virials:                       True
+hardy:                         True
+skin:                          0.0
+virials_reference:             geometry.in.supercell
+
+
+[recompute]
+outfolder:                     hardy_r0
+batched:                       True
+batch_size:                    25
+stop:                          125000
+step:                          2
+
+[slurm]
+name:                          re
+tag:                           c:reh:{{ temperature }}:{{ size }}
+mail_type:                     none
+mail_address:                  langer@fhi-berlin.mpg.de
+nodes:                         1
+cores:                         40
+queue:                         p.talos
+timeout:                       720
+pre_command:                   
+
+[restart]
+command:                       gknet submit recompute re_h.in

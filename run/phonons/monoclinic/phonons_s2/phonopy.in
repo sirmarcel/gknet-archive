@@ -1,0 +1,19 @@
+[calculator]
+name:                          fastCalculator
+module:                        gknet.experimental
+
+[calculator.parameters]
+model:                         ../../../best_model.torch
+stress:                        True
+energies:                      False
+virials:                       False
+skin:                          0.0
+
+[phonopy]
+supercell_matrix:              2
+displacement:                  0.01
+is_diagonal:                   false
+is_plusminus:                  true
+symprec:                       1e-05
+q_mesh:                        [45, 45, 45]
+workdir:                       phonopy

@@ -1,0 +1,30 @@
+[calculator]
+name:                          fastCalculator
+module:                        gknet.experimental
+
+[calculator.parameters]
+model:                         ../../../best_model.torch
+stress:                        False
+virials:                       True
+transpose_derivatives:         True
+skin:                          0.0
+virials_reference:             geometry.in
+
+
+[recompute]
+outfolder:                     fast_transpose_r0
+batch_size:                    1000
+
+[slurm]
+name:                          re
+tag:                           r0ft:{{ temperature }}
+mail_type:                     none
+mail_address:                  langer@fhi-berlin.mpg.de
+nodes:                         1
+cores:                         40
+queue:                         p.talos
+timeout:                       240
+pre_command:                   
+
+[restart]
+command:                       gknet submit recompute recompute_fast_transpose_r0.in
