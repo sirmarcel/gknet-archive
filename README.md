@@ -28,3 +28,7 @@ If your goal is to build on the methods developed in the paper, we recommended t
 The training trajectories are also available on the NOMAD repository under DOI [10.17172/NOMAD/2023.03.24-2](https://doi.org/10.17172/NOMAD/2023.03.24-2).
 
 For any further questions, feel free to contact `mail@marcel.science`, `@marceldotsci` on twitter, or `@marcel@sigmoid.social`.
+
+### versions
+
+- `v1.0`: version for the initial arXiv upload (archived at [doi:10.5281/zenodo.7767432](https://doi.org/10.5281/zenodo.7767432))
