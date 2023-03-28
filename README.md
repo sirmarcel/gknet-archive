@@ -32,3 +32,4 @@ For any further questions, feel free to contact `mail@marcel.science`, `@marceld
 ### versions
 
 - `v1.0`: version for the initial arXiv upload (archived at [doi:10.5281/zenodo.7767432](https://doi.org/10.5281/zenodo.7767432))
+- `v1.1`: version for arXiv version 2. (fixed some issues related to figures, no other changes)
