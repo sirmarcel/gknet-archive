@@ -89,6 +89,6 @@ def render_time(value, develop=False, unit="ns"):
 
 
 def render_j(text="", upper=""):
-    return r"$\boldsymbol{J}_{\text{X}}^{\text{Y}}$".replace("X", text).replace(
+    return r"${\bf J}_{\text{X}}^{\text{Y}}$".replace("X", text).replace(
         "Y", upper
     )

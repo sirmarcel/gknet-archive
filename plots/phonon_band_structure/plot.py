@@ -45,7 +45,7 @@ def setup_bandstructure(ax, phonons):
     ax.set_xlabel("Wave vector")
 
     ax.set_xticks(special_points)
-    ax.set_xticklabels(labels, rotation="35")
+    ax.set_xticklabels(labels, rotation=35)
 
     ax.set_xlim(0, all_distances[-1][-1])
     ax.set_ylim(-2, 25)

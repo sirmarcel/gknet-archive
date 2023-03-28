@@ -5,7 +5,7 @@ This repository contains data, code, and related artefacts supporting the follow
 ```
 "Heat flux for semi-local machine-learning potentials"
 Marcel F. Langer, Florian Knoop, Christian Carbogno, Matthias Scheffler, and Matthias Rupp
-arXiv: TBD
+arXiv:2303.14434
 doi: TBD
 ```
 
